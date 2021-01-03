@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fcfcfc;
+}
+
+.window {
+  width: 800px;
+  height: 600px;
+  margin: 100px auto;
+  overflow: hidden;
+}
+.images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.images > img {
+  position: absolute;
+  transition: all 1.5s;
+}
+.images > img.active {
+  z-index: 1;
+  opacity: 1;
+}
+.images > img.deactive {
+  opacity: 0.3;
+}
+/* 从左到右 */
+.images > img.right {
+  top: 0;
+  left: -100%;
+}
+.images > img.right.active {
+  left: 0;
+}
+.images > img.right.deactive {
+  left: 100%;
+}
+/* 从右到左 */
+.images > img.left {
+  top: 0;
+  left: 100%;
+}
+.images > img.left.active {
+  left: 0;
+}
+.images > img.left.deactive {
+  left: -100%;
+}
+/* 从下到上 */
+.images > img.top {
+  left: 0;
+  top: 100%;
+}
+.images > img.top.active {
+  top: 0;
+}
+.images > img.top.deactive {
+  top: -100%;
+}
+/* 从上到下 */
+.images > img.bottom {
+  left: 0;
+  top: -100%;
+}
+.images > img.bottom.active {
+  top: 0;
+}
+.images > img.bottom.deactive {
+  top: 100%;
+}
