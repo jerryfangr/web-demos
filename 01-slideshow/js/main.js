@@ -6,13 +6,13 @@
    * @param {Number} deactiveIndex
    */
   function setSlidesState (slides, activeIndex, deactiveIndex) {
-    if (activeIndex >= 0) {
+    if (activeIndex !== undefined && activeIndex >= 0) {
       slides.eq(activeIndex)
         .addClass('active')
         .siblings('.active')
         .removeClass('active');
     }
-    if (deactiveIndex >= 0) {
+    if (deactiveIndex !== undefined && deactiveIndex >= 0) {
       slides.eq(deactiveIndex).addClass('deactive');
       slides.eq(deactiveIndex).one('transitionend', function (e) {
         $(e.currentTarget).removeClass('deactive');
@@ -43,18 +43,27 @@
   }
 
   /**
-   * 添加鼠标移入移除轮播图事件
+   * 鼠标移入移出轮播图与切出页面事件
    * @param {Object} $elem jQuery Node
    * @param {Object} playerData
    */
   function addEvents($elem, playerData) {
     $elem.on('mouseenter', function () {
-      clearInterval(playerData.timer)
+      clearInterval(playerData.timer);
     });
 
     $elem.on('mouseleave', function () {
       startAutoPlayer(playerData);
     });
+
+    $(document).on("visibilitychange", function () {
+      // "hidden" === document.visibilityState
+      if (document.hidden) {
+        clearInterval(playerData.timer);
+      } else {
+        startAutoPlayer(playerData);
+      }
+    })
   }
 
   /**
@@ -91,4 +100,4 @@
   }
 
   ___main();
-}.call()
+}.call();
