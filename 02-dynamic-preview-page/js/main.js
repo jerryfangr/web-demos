@@ -85,11 +85,11 @@
     styleDom: styleElem,
     codeDom: codeElem,
     speedDelay: 30,
-    debugModel(percent) {
-      let n = (percent / 100 * this.code.length) | 0
-      this.codeIndex = n
-      this.renderCode += this.code.substring(0, n)
-    }
+    // debugModel(percent) {
+    //   let n = (percent / 100 * this.code.length) | 0
+    //   this.codeIndex = n
+    //   this.renderCode += this.code.substring(0, n)
+    // }
   }, () => { // 第二部分 创建白纸
       addPaper()
       wirteCode({ // 第三部分 往白纸写markdown介绍
