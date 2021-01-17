@@ -4,3 +4,10 @@
 .token.punctuation {
   color: #000;
 }
+
+#codeTag {
+  height: 100vh;
+  overflow: hidden;
+}
+
+

@@ -10,6 +10,6 @@
 
 ## 例子
 
-1. **全方向(上下左右)无缝轮播图 [预览](https://github.com/jerryfangr/web-demos/01-slideshow/index.html)**
+1. **全方向(上下左右)无缝轮播图 [预览](https://jerryfangr.github.io/web-demos/01-slideshow/index.html)**
 
-2. **动态页面 [预览](https://github.com/jerryfangr/web-demos/02-dynamic-preview-page/index.html)**
+2. **动态页面 [预览](https://jerryfangr.github.io/web-demos/02-dynamic-preview-page/index.html)**
