@@ -14,7 +14,7 @@
   /* 来个基础背景配置 */
   html {
     background: #dedede;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   /* 来个边框 */
